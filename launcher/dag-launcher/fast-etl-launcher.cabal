@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           fast-etl
+name:           fast-etl-launcher
 version:        0.1.0.0
 homepage:       https://github.com/devcdcc/fast-etl#readme
 bug-reports:    https://github.com/devcdcc/fast-etl/issues
@@ -21,10 +21,10 @@ source-repository head
   type: git
   location: https://github.com/devcdcc/fast-etl
 
-executable dag-validator
+executable dag-launcher
   main-is: Main.hs
   other-modules:
-      Paths_fast_etl
+      Paths_fast_etl_launcher
   extra-lib-dirs:
       ../../core/target/release
   extra-libraries:

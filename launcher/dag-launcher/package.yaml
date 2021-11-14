@@ -1,4 +1,4 @@
-name:                fast-etl-sql-validator
+name:                fast-etl-launcher
 version:             0.1.0.0
 github:              "devcdcc/fast-etl"
 license:             MIT
@@ -13,7 +13,7 @@ dependencies:
   - base >= 4 && < 5
 
 executables:
-  dag-validator:
+  dag-launcher:
     main:                Main.hs
     extra-libraries:     dag_validator_lib, gcc_eh, pthread
     extra-lib-dirs:      ../../core/target/release

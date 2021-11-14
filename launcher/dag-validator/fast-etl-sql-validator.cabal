@@ -1,0 +1,34 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           fast-etl-sql-validator
+version:        0.1.0.0
+homepage:       https://github.com/devcdcc/fast-etl#readme
+bug-reports:    https://github.com/devcdcc/fast-etl/issues
+author:         Carlos Daniel Cañon Carrero
+maintainer:     devcdcc@gmail.com
+copyright:      2021 Carlos Daniel Cañon Carrero
+license:        MIT
+build-type:     Simple
+extra-source-files:
+    ../../core/dag-validator-lib/src/lib.rs
+    ../../core/dag-validator-lib/Cargo.toml
+
+source-repository head
+  type: git
+  location: https://github.com/devcdcc/fast-etl
+
+executable dag-validator
+  main-is: Main.hs
+  other-modules:
+      Paths_fast_etl_sql_validator
+  extra-lib-dirs:
+      ../../core/target/release
+  extra-libraries:
+      dag_validator_lib, gcc_eh, pthread
+  build-depends:
+      base ==4.*
+  default-language: Haskell2010
