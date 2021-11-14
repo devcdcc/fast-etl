@@ -7,3 +7,4 @@
 /core/target/
 /out/
 /target/
+/launcher/*/*.iml

@@ -21,14 +21,14 @@ source-repository head
   type: git
   location: https://github.com/devcdcc/fast-etl
 
-executable haskell-invokes-rust
+executable dag-validator
   main-is: Main.hs
   other-modules:
       Paths_fast_etl
   extra-lib-dirs:
-      ../../core/dag-validator-lib/target/release
+      ../../core/target/release
   extra-libraries:
-      sample, gcc_eh, pthread
+      dag_validator_lib, gcc_eh, pthread
   build-depends:
       base ==4.*
   default-language: Haskell2010
