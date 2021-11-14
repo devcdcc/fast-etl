@@ -1,0 +1,19 @@
+name:                fast-etl
+version:             0.1.0.0
+github:              "devcdcc/fast-etl"
+license:             MIT
+author:              "Carlos Daniel Cañon Carrero"
+maintainer:          "devcdcc@gmail.com"
+copyright:           "2021 Carlos Daniel Cañon Carrero"
+extra-source-files:
+- ../../core/dag-validator-lib/src/**/*.rs
+- ../../core/dag-validator-lib/Cargo.toml
+
+dependencies:
+  - base >= 4 && < 5
+
+executables:
+  haskell-invokes-rust:
+    main:                Main.hs
+    extra-libraries:     sample, gcc_eh, pthread
+    extra-lib-dirs:      ../../core/dag-validator-lib/target/release

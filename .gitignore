@@ -1,0 +1,8 @@
+*.exe
+*.obj
+*.log
+/**/dist-newstyle
+/**/.stack-work/
+/**/.idea/
+/core/*/target/
+/out/
