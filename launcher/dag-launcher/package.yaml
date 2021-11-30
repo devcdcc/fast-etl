@@ -5,15 +5,26 @@ license:             MIT
 author:              "Carlos Daniel Cañon Carrero"
 maintainer:          "devcdcc@gmail.com"
 copyright:           "2021 Carlos Daniel Cañon Carrero"
-extra-source-files:
-- ../../core/dag-validator-lib/src/**/*.rs
-- ../../core/dag-validator-lib/Cargo.toml
+#extra-source-files:
+#- ../../core/dag-validator-lib/src/**/*.rs
+#- ../../core/dag-validator-lib/Cargo.toml
+
+library:
+  source-dirs: src
+  extra-libraries:     gcc_eh, pthread
 
 dependencies:
   - base >= 4 && < 5
+  - swagger2
 
 executables:
   dag-launcher:
     main:                Main.hs
-    extra-libraries:     dag_validator_lib, gcc_eh, pthread
-    extra-lib-dirs:      ../../core/target/release
+    source-dirs:         app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
+    extra-libraries:     gcc_eh, pthread

@@ -12,8 +12,19 @@ extra-source-files:
 dependencies:
   - base >= 4 && < 5
 
+library:
+  source-dirs: src
+  extra-libraries:     gcc_eh, pthread
+
 executables:
   dag-validator:
     main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - base
     extra-libraries:     dag_validator_lib, gcc_eh, pthread
     extra-lib-dirs:      ../../core/target/release
