@@ -1,11 +1,11 @@
 [package]
-name = "sample"
+name = "dag-validator"
 version = "0.1.0"
-authors = ["Kazuki Okamoto <kazuki.okamoto@kakkun61.com>"]
+authors = ["Carlos D. Canon C. <devcdcc@gmail.com>"]
 edition = "2018"
 
 [lib]
-name = "sample"
+name = "dag_validator_lib"
 crate-type = ["staticlib"]
 
 [dependencies]

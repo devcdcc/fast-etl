@@ -4,5 +4,7 @@
 /**/dist-newstyle
 /**/.stack-work/
 /**/.idea/
-/core/*/target/
+/core/target/
 /out/
+/target/
+/launcher/*/*.iml
