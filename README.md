@@ -36,7 +36,7 @@ Once you've compiled your rust code, you should run your application with.
 
 - [x] Simple rust haskell connection.
 - [ ] Publish json specifications.
-- [ ] Design and publish architecture.
+- [x] Design and publish basic architecture.
 - [ ] Create basic CI/CD pipelines.
 - [ ] Validate SQL syntax on rust.
 - [ ] Validate SQL semantic on rust.
