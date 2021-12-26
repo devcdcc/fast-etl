@@ -5,6 +5,22 @@ Fast ETL is a query framework aiming to create and deploy high-performance ETLs,
 
 Fast-ETL will be used to process big data without advanced big data or rust knowledge, just using a simple json with a set of steps over our data sources.
 
+## Arquitecture
+
+This is a simple overview of the architecture.
+
+We will have a Schedular that will check the DAG syntax and send it to the launcher.
+
+Then based on the kind of job (Batch or streaming). The launcher starts sending the application to its respective engine data fusion or fluvio respectively.
+
+Once those applications are finished, it will send a notification to the scheduler, and then the schedule will update its indexes or send a notification to someone that requires this.
+
+
+The whole project will run on Kubernetes.
+
+
+![Arquitecture](/Architecture.drawio.svg)
+
 ## Build
 
 I've forked this from https://github.com/kakkun61/haskell-invokes-rust
