@@ -21,6 +21,12 @@ The whole project will run on Kubernetes.
 
 ![Arquitecture](/Architecture.drawio.svg)
 
+
+## Flow
+There is a simple flow diagram which show us about how it works.
+
+![Flow](/iterations.drawio.svg)
+
 ## Build
 
 I've forked this from https://github.com/kakkun61/haskell-invokes-rust
